@@ -1,6 +1,6 @@
 {
   "name": "seasons",
-  "version": "2.6.2",
+  "version": "2.5.1",
   "description": "\"A colorful theme with a configuration option to switch style sheets for a particular season, plus 'night'.\"",
   "main": "gulpfile.js",
   "devDependencies": {
@@ -31,9 +31,5 @@
   "bugs": {
     "url": "https://github.com/omeka/theme-seasons/issues"
   },
-  "homepage": "https://github.com/omeka/theme-seasons#readme",
-  "browserslist": [
-    "> 5%",
-    "> 1% in US"
-  ]
+  "homepage": "https://github.com/omeka/theme-seasons#readme"
 }

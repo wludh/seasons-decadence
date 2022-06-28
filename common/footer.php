@@ -11,8 +11,7 @@
             <?php endif; ?>
         </div>
 
-        <p><?php echo __('Proudly powered by <a href="http://omeka.org">Omeka</a>.'); ?></p>
-
+<a href="https://www.wlu.edu/arts/museums/"><img src="https://exhibits-museums.omeka.wlu.edu/files/theme_uploads/museums-logo-transparent.png" width="30%"> </a>
     <?php fire_plugin_hook('public_footer', array('view' => $this)); ?>
 
 </footer>

@@ -1,4 +1,3 @@
-
 <?php
 echo head(array(
     'title' => metadata('exhibit_page', 'title') . ' &middot; ' . metadata('exhibit', 'title'),
@@ -9,22 +8,16 @@ echo head(array(
 <?php if ($exhibitNavOption == 'full'): ?>
 <nav id="exhibit-pages" class="full">
     <?php echo exhibit_builder_page_nav(); ?>
-
 </nav>
 <?php endif; ?>
 
+<h1><span class="exhibit-page"><?php echo metadata('exhibit_page', 'title'); ?></span></h1>
 
-
-<div id="narrow-content">
-
-
+<?php if (count(exhibit_builder_child_pages()) > 0 && $exhibitNavOption == 'full'): ?>
 <nav id="exhibit-child-pages" class="secondary-nav">
     <?php echo exhibit_builder_child_page_nav(); ?>
 </nav>
-
-
-<h1><span class="exhibit-page"><?php echo metadata('exhibit_page', 'title'); ?></span></h1>
-
+<?php endif; ?>
 
 <div role="main" id="exhibit-blocks">
 <?php exhibit_builder_render_exhibit_page(); ?>
@@ -52,6 +45,5 @@ echo head(array(
     <?php echo exhibit_builder_page_tree($exhibit, $exhibit_page); ?>
 </nav>
 <?php endif; ?>
-</div>
 
 <?php echo foot(); ?>

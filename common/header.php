@@ -3,12 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?php if ($author = option('author')): ?>
-    <meta name="author" content="<?php echo $author; ?>" />
-    <?php endif; ?>
-    <?php if ($copyright = option('copyright')): ?>
-    <meta name="copyright" content="<?php echo $copyright; ?>" />
-    <?php endif; ?>
     <?php if ($description = option('description')): ?>
     <meta name="description" content="<?php echo $description; ?>">
     <?php endif; ?>
@@ -54,13 +48,21 @@
     <div id="wrap">
         <header role="banner">
             <div id="site-title">
-                <?php echo exhibit_builder_link_to_exhibit($exhibit); ?>
+                <?php echo link_to_home_page(theme_logo()); ?>
             </div>
-            <div id="site-image"><img src="https://exhibits-museums.omeka.wlu.edu/files/theme_uploads/hogarth-logo.png"></div>
-            
+            <div id="search-container" role="search">
+                <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
+                <?php echo search_form(array('show_advanced' => true)); ?>
+                <?php else: ?>
+                <?Php echo search_form(); ?>
+                <?php endif; ?>
+            </div>
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
         </header>
 
+        <nav id="top-nav" class="top" role="navigation">
+            <?php echo public_nav_main(); ?>
+        </nav>
 
         <div id="content" role="main" tabindex="-1">
             <?php

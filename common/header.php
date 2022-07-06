@@ -53,6 +53,7 @@
             <div id="site-image"><img src="https://exhibits-museums.omeka.wlu.edu/files/theme_uploads/hogarth-logo.png"></div>
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
         </header>
+        
 
         
 
